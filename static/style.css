@@ -1,0 +1,229 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #d6eaf8, #0571b1, #d6ab5c, #134e6f);
+    background-size: 800% 800%;
+    animation: gradientShift 20s ease infinite;
+    color: #333;
+}
+
+/* Animate the gradient for a dynamic feel */
+@keyframes gradientShift {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+/* Centered, wide container */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* Headings */
+h1, h4 {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    color: #134e6f;
+    margin-bottom: 1.2em;
+    text-shadow: 0 2px 10px #d6eaf888;
+}
+
+/* Glass effect cards */
+.card {
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 #134e6f33;
+    background: rgba(255,255,255,0.85);
+    padding: 2.5rem 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid #d6ab5c33;
+    transition: box-shadow 0.3s, transform 0.3s;
+    animation: fadeInUp 0.7s;
+}
+.card:hover {
+    box-shadow: 0 16px 48px 0 #0571b166;
+    transform: translateY(-8px) scale(1.01);
+}
+
+/* Fade-in animation for cards and tables */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Buttons */
+.btn {
+    font-size: 1.09em;
+    font-weight: 600;
+    border-radius: 9px;
+    margin: 0 2px;
+    border: none;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+    box-shadow: 0 2px 12px 0 #134e6f11;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #0571b1 0%, #134e6f 100%);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #134e6f 0%, #0571b1 100%);
+    box-shadow: 0 4px 16px #0571b133;
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background: linear-gradient(90deg, #d6ab5c 0%, #b7a14f 100%);
+    color: #fff;
+}
+.btn-success:hover {
+    background: linear-gradient(90deg, #b7a14f 0%, #d6ab5c 100%);
+    box-shadow: 0 4px 16px #d6ab5c33;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #ee6868 0%, #cb2d2d 100%);
+    color: #fff;
+}
+.btn-danger:hover {
+    background: linear-gradient(90deg, #cb2d2d 0%, #ee6868 100%);
+    box-shadow: 0 4px 16px #cb2d2d33;
+    transform: scale(1.05);
+}
+
+.btn-warning {
+    background: linear-gradient(90deg, #ffe07a 0%, #d6ab5c 100%);
+    color: #333;
+}
+.btn-warning:hover {
+    background: linear-gradient(90deg, #d6ab5c 0%, #ffe07a 100%);
+    box-shadow: 0 4px 16px #d6ab5c33;
+    transform: scale(1.05);
+}
+
+.btn-outline-dark {
+    border: 2px solid #134e6f;
+    color: #134e6f;
+    background: transparent;
+}
+.btn-outline-dark:hover {
+    background: #134e6f;
+    color: #fff;
+    box-shadow: 0 4px 16px #134e6f22;
+}
+
+.btn-secondary {
+    background: #d6eaf8;
+    color: #134e6f;
+}
+.btn-secondary:hover {
+    background: #d6ab5c33;
+    color: #134e6f;
+}
+
+/* Table Styling */
+.table {
+    background: rgba(255,255,255,0.97);
+    box-shadow: 0 4px 18px #0571b112;
+    border-radius: 12px;
+    animation: fadeInUp 0.9s;
+    overflow: hidden;
+    margin-bottom: 0;
+    font-size: 1.05em;
+}
+
+.table th {
+    background: linear-gradient(90deg, #0571b1 60%, #d6ab5c 100%);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #d6ab5c;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #d6eaf8;
+}
+.table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #fffbe6;
+}
+
+.table-bordered th, .table-bordered td {
+    border-color: #d6ab5c !important;
+}
+
+/* Badges */
+.badge {
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.5em 0.9em;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #d6ab5c22;
+}
+
+.badge.bg-warning {
+    background: linear-gradient(90deg, #ffe07a 0%, #d6ab5c 100%);
+    color: #333;
+}
+
+.badge.bg-success {
+    background: linear-gradient(90deg, #d6ab5c 0%, #b7a14f 100%);
+    color: #fff;
+}
+
+.badge.bg-danger {
+    background: linear-gradient(90deg, #ee6868 0%, #cb2d2d 100%);
+    color: #fff;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #134e6f22;
+    font-size: 1.06em;
+    animation: fadeInUp 0.8s;
+    background: linear-gradient(90deg, #d6eaf888 0%, #d6ab5c88 100%);
+    border: none;
+}
+
+/* Form Inputs */
+input.form-control {
+    border-radius: 8px;
+    border: 2px solid #d6ab5c99;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 8px #d6ab5c22;
+    font-size: 1.07em;
+}
+
+input.form-control:focus {
+    border-color: #0571b1;
+    box-shadow: 0 4px 20px #0571b122;
+}
+
+/* Responsive: Cards and tables fill container on small screens */
+@media (max-width: 900px) {
+    .container {
+        max-width: 98vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    .card, .table {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+}
+
+/* Scrollbar for professional touch */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #d6ab5c;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #d6eaf8;
+}
